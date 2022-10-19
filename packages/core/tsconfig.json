@@ -1,5 +1,12 @@
 {
   "files": [],
+  "include": [
+    "src/**/*.vue",
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "tests/**/*.ts",
+    "tests/**/*.tsx"
+  ],
   "references": [
     {
       "path": "./tsconfig.config.json"

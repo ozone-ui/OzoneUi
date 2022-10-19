@@ -4,9 +4,16 @@ import { Icon } from "@iconify/vue";
 const baseClasses = 'px-[12px] py-[6px] rounded-[8px] text-white font-bold text-[14px] flex items-center justify-center gap-x-[8px]'
 
 
+ type BtnType = 'primary' | 'secondary' | 'danger' | 'success' | 'warning' | 'info' | 'light' | 'dark' | 'link' | 'outline-primary' | 'outline-secondary' | 'outline-danger' | 'outline-success' | 'outline-warning' | 'outline-info' | 'outline-light' | 'outline-dark' | 'outline-link'
+
+
 export const Btn = defineComponent({
     name: 'Btn',
     props: {
+        btnType: {
+            type: String as PropType<BtnType>,
+            default: 'primary'
+        },
         text: {
             type: String as PropType<string>,
             required: true
