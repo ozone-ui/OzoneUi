@@ -1,7 +1,7 @@
 {
-  "name": "@ozone-ui/ui",
+  "name": "@ozone-ui/core",
   "version": "0.0.4",
-  "description": "Ozone UI",
+  "description": "OzoneUi Core",
   "license": "MIT",
   "private": false,
   "author": {
