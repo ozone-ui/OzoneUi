@@ -1,0 +1,39 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: "AvenirArabic";
+    src: url("./fonts/AvenirArabic-Book.otf");
+    font-weight: 400;
+  }
+  @font-face {
+    font-family: "AvenirArabic";
+    src: url("./fonts/AvenirArabic-Medium.otf");
+    font-weight: 500;
+  }
+  @font-face {
+    font-family: "AvenirArabic";
+    src: url("./fonts/AvenirArabic-Heavy.otf");
+    font-weight: 700;
+  }
+
+  @font-face {
+    font-family: "AvenirArabic";
+    src: url("./fonts/AvenirArabic-Light.otf");
+    font-weight: 300;
+  }
+
+  @font-face {
+    font-family: "AvenirArabic";
+    src: url("./fonts/AvenirArabic-Black.otf");
+    font-weight: 900;
+  }
+
+  * {
+    font-family: "Inter", "AvenirArabic" !important;
+  }
+}
