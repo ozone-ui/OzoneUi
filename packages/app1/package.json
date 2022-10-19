@@ -1,7 +1,7 @@
 {
   "name": "@husamnas/app1",
   "version": "0.0.2",
-  "private": false,
+  "private": true,
   "license": "MIT",
   "scripts": {
     "dev": "vite",
