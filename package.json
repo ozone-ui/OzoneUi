@@ -35,7 +35,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/abusiraj84/Ozone-ui.git",
+    "url": "https://github.com/ozone-ui/OzoneUi.git",
     "directory": "packages/ui"
   },
   "publishConfig": {
