@@ -70,5 +70,6 @@
     "registry": "https://npm.pkg.github.com",
     "access": "public",
     "directory": "dist"
-  }
+  },
+  "gitHead": "d8d30645d4e439755e2b2e14171fa63be450a91a"
 }
