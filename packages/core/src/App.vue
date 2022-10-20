@@ -6,7 +6,6 @@
   >
     <Card title="الأزرار" class="gap-y-3 w-full">
       <Btn
-        key="btn1"
         text="حجز جلسة"
         bg="#F4DB3A"
         color="#000"
@@ -17,47 +16,52 @@
         disabled
       />
       <Btn
-        key="btn2"
         text="تسجيل دخول"
-        bg="#3A7BF4"
-        color="#fff"
-        endIcon="mi:chevron-right"
-        iconColor="#fff"
+        startIcon="ri:login-circle-fill"
         iconWidth="20"
+        textBtn
+        color="#0F99BB"
+        iconColor="#065569"
+        link="https://www.google.com"
       />
       <Btn
-        key="btn3"
-        text="رفع ملف"
-        bg="#3AEBF4"
-        color="#000"
-        startIcon="mi:cloud-upload"
-        iconColor="#070000"
-        iconWidth="20"
+        text="حفظ وإرسال"
+        bg="#7816DA"
+        color="#ffffff"
+        startIcon="bi:send-plus-fill"
+        iconColor="#FFFFFF"
+        iconWidth="15"
       />
       <Btn
-        key="btn4"
-        text="حذف"
-        bg="#F43A40"
+        text="تعديل"
+        bg="#000000"
         color="#fff"
-        startIcon="ant-design:delete-twotone"
+        startIcon="ant-design:edit-outlined"
         iconColor="#fff"
         iconWidth="18"
       />
       <Btn
-        key="btn5"
+        border
+        bg="#000000"
+        color="#fff"
+        endIcon="fluent:send-copy-24-regular"
+        iconColor="#fff"
+        iconWidth="18"
+        @click="toogleModal()"
+      />
+      <Btn
         border
         text="طلب المساعدة"
-        bg="#7E3AF4"
+        bg="#000000"
         color="#fff"
-        endIcon="clarity:help-info-line"
+        endIcon="fluent:send-copy-24-regular"
         iconColor="#fff"
         iconWidth="18"
         @click="toogleModal()"
       />
     </Card>
-    <Card title="الأزرار" class="gap-y-3 w-full" border>
+    <Card title="الأزرار" class="gap-y-3 w-full">
       <Btn
-        key="btn1"
         text="حجز جلسة"
         bg="#F4DB3A"
         color="#000"
@@ -67,7 +71,13 @@
         iconWidth="20"
       />
       <Btn
-        key="btn2"
+        bg="#F4DB3A"
+        color="#000"
+        endIcon="line-md:sunny-outline-twotone-loop"
+        iconColor="#070000"
+        iconWidth="20"
+      />
+      <Btn
         text="تسجيل دخول"
         bg="#3A7BF4"
         color="#fff"
@@ -75,8 +85,8 @@
         iconColor="#fff"
         iconWidth="20"
       />
+      <Btn bg="#3A7BF4" endIcon="bxs:user-x" iconWidth="25" textBtn />
       <Btn
-        key="btn3"
         text="رفع ملف"
         bg="#3AEBF4"
         color="#000"
@@ -85,7 +95,6 @@
         iconWidth="20"
       />
       <Btn
-        key="btn4"
         text="حذف"
         bg="#F43A40"
         color="#fff"
@@ -94,12 +103,20 @@
         iconWidth="18"
       />
       <Btn
-        key="btn5"
         border
         text="طلب المساعدة"
         bg="#7E3AF4"
         color="#fff"
         endIcon="clarity:help-info-line"
+        iconColor="#fff"
+        iconWidth="18"
+        @click="toogleModal()"
+      />
+      <Btn
+        text="جاري التحميل"
+        bg="#3A4AF4"
+        color="#fff"
+        endIcon="eos-icons:loading"
         iconColor="#fff"
         iconWidth="18"
         @click="toogleModal()"
@@ -118,4 +135,46 @@ const showModal = ref(false)
 const toogleModal = () => {
   showModal.value = !showModal.value
 }
+function createRipple(event) {
+  const button = event.currentTarget
+
+  const circle = document.createElement('span')
+  const diameter = Math.max(button.clientWidth, button.clientHeight)
+  const radius = diameter / 2
+
+  circle.style.width = circle.style.height = `${diameter}px`
+  circle.style.left = `${event.clientX - button.offsetLeft - radius}px`
+  circle.style.top = `${event.clientY - button.offsetTop - radius}px`
+  circle.classList.add('ripple')
+
+  const ripple = button.getElementsByClassName('ripple')[0]
+
+  if (ripple) {
+    ripple.remove()
+  }
+
+  button.appendChild(circle)
+}
+
+const buttons = document.getElementsByTagName('button')
+for (const button of buttons as any) {
+  button.addEventListener('click', createRipple)
+}
 </script>
+
+<style scoped>
+span.ripple {
+  position: absolute;
+  border-radius: 50%;
+  transform: scale(0);
+  animation: ripple 600ms linear;
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+@keyframes ripple {
+  to {
+    transform: scale(4);
+    opacity: 0;
+  }
+}
+</style>

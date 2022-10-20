@@ -3,9 +3,11 @@ import { Icon } from '@iconify/vue'
 
 //  classes used by button UI components such as IconButton
 const baseClasses =
-  'px-[12px] py-[6px] rounded-[8px] text-white font-bold text-[14px] flex items-center justify-center gap-x-[8px] hover:brightness-110 transition-all duration-200 active:brightness-90 w-fit'
+  'px-[12px] py-[6px] rounded-[8px]  font-bold text-[14px] flex items-center justify-center gap-x-[8px] hover:brightness-110 transition-all duration-200 active:brightness-90 w-fit'
+const textClasses =
+  ' py-[6px]  font-bold text-[14px] flex items-center justify-center gap-x-[8px] hover:brightness-110 transition-all duration-200 active:brightness-90 w-fit'
 const borderClasses =
-  'px-[10px] py-[6px] rounded-[8px] font-bold text-[14px] flex items-center justify-center gap-x-[8px] border-[1.5px] w-fit'
+  'px-[10px] py-[6px] rounded-[8px] font-bold text-[14px] flex items-center justify-center gap-x-[8px] border-[1.5px] w-fit hover:bg-white hover:text-black transition-all duration-200 active:brightness-90'
 
 const disabledClasses = 'text-[#1a2027] bg-[#0000001f]'
 
@@ -18,7 +20,7 @@ export const Btn = defineComponent({
     },
     text: {
       type: String as PropType<string>,
-      required: true,
+      default: '',
     },
     bg: {
       type: String as PropType<string>,
@@ -26,7 +28,7 @@ export const Btn = defineComponent({
     },
     color: {
       type: String as PropType<string>,
-      default: '#fff',
+      default: '#000',
     },
     startIcon: {
       type: String as PropType<string>,
@@ -42,7 +44,7 @@ export const Btn = defineComponent({
     },
     iconColor: {
       type: String as PropType<string>,
-      default: '#fff',
+      default: '#000',
     },
     border: {
       type: Boolean as PropType<boolean>,
@@ -52,21 +54,36 @@ export const Btn = defineComponent({
       type: Boolean as PropType<boolean>,
       default: false,
     },
+    textBtn: {
+      type: Boolean as PropType<boolean>,
+      default: false,
+    },
+    link: {
+      type: String as PropType<string>,
+      default: '',
+    },
   },
 
   render() {
     return h(
-      'button',
+      this.link ? 'a' : 'button',
       {
-        class: this.border ? borderClasses : baseClasses,
+        class: this.border
+          ? borderClasses
+          : baseClasses
+          ? this.textBtn
+            ? textClasses
+            : baseClasses
+          : baseClasses,
         style: {
-          background: this.border
-            ? 'transparent'
-            : this.bg
-            ? this.disabled
-              ? '#0000001f'
+          background:
+            this.border || this.textBtn
+              ? ''
               : this.bg
-            : '#073368',
+              ? this.disabled
+                ? '#0000001f'
+                : this.bg
+              : '#073368',
           color: this.disabled
             ? '#1A20276B'
             : this.border
@@ -75,11 +92,16 @@ export const Btn = defineComponent({
           borderColor: this.border ? this.bg : 'transparent',
           cursor: this.disabled ? 'auto' : 'pointer',
         },
-        // habdle click when button is clicked
+        disabled: this.disabled,
+        href: this.link,
+        target: '_blank',
+
+        // on click if not disabled or link
         onClick: () => {
-          // if button is disabled, do nothing
-          if (this.disabled) return
-          console.log('clicked')
+          if (!this.disabled && !this.link) {
+            this.$emit('click')
+            console.log('clicked')
+          }
         },
       },
       [
