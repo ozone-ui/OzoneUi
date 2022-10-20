@@ -1,6 +1,6 @@
 {
   "name": "@ozone-ui/core",
-  "version": "0.0.12",
+  "version": "0.0.1",
   "description": "OzoneUi Core",
   "license": "MIT",
   "private": false,
@@ -70,5 +70,6 @@
     "registry": "https://npm.pkg.github.com",
     "access": "public",
     "directory": "dist"
-  }
+  },
+  "gitHead": "54c686e400521b726979464673f25c0bad0d0b5e"
 }
