@@ -1,128 +1,130 @@
 <template>
-  <Card
-    dir="rtl"
-    class="mt-[100px] justify-center items-center w-[815px] mx-auto gap-y-3 flex flex-col"
-    border
-  >
-    <Card title="الأزرار" class="gap-y-3 w-full">
-      <Btn
-        text="حجز جلسة"
-        bg="#F4DB3A"
-        color="#000"
-        startIcon="line-md:uploading-loop"
-        endIcon="line-md:sunny-outline-twotone-loop"
-        iconColor="#070000"
-        iconWidth="20"
-        disabled
-      />
-      <Btn
-        text="تسجيل دخول"
-        startIcon="ri:login-circle-fill"
-        iconWidth="20"
-        textBtn
-        color="#0F99BB"
-        iconColor="#065569"
-        link="https://www.google.com"
-      />
-      <Btn
-        text="حفظ وإرسال"
-        bg="#7816DA"
-        color="#ffffff"
-        startIcon="bi:send-plus-fill"
-        iconColor="#FFFFFF"
-        iconWidth="15"
-        v-wave
-      />
-      <Btn
-        text="تعديل"
-        bg="#000000"
-        color="#fff"
-        startIcon="ant-design:edit-outlined"
-        iconColor="#fff"
-        iconWidth="18"
-      />
-      <Btn
-        border
-        bg="#000000"
-        color="#fff"
-        endIcon="fluent:send-copy-24-regular"
-        iconColor="#fff"
-        iconWidth="18"
-        @click="toogleModal()"
-      />
-      <Btn
-        border
-        text="طلب المساعدة"
-        bg="#000000"
-        color="#fff"
-        endIcon="fluent:send-copy-24-regular"
-        iconColor="#fff"
-        iconWidth="18"
-        @click="toogleModal()"
-      />
-    </Card>
-    <Card title="الأزرار" class="gap-y-3 w-full">
-      <Btn
-        text="حجز جلسة"
-        bg="#F4DB3A"
-        color="#000"
-        startIcon="line-md:uploading-loop"
-        endIcon="line-md:sunny-outline-twotone-loop"
-        iconColor="#070000"
-        iconWidth="20"
-      />
-      <Btn
-        bg="#F4DB3A"
-        color="#000"
-        endIcon="line-md:sunny-outline-twotone-loop"
-        iconColor="#070000"
-        iconWidth="20"
-      />
-      <Btn
-        text="تسجيل دخول"
-        bg="#3A7BF4"
-        color="#fff"
-        endIcon="mi:chevron-right"
-        iconColor="#fff"
-        iconWidth="20"
-      />
-      <Btn bg="#3A7BF4" endIcon="bxs:user-x" iconWidth="25" textBtn />
-      <Btn
-        text="رفع ملف"
-        bg="#3AEBF4"
-        color="#000"
-        startIcon="mi:cloud-upload"
-        iconColor="#070000"
-        iconWidth="20"
-      />
-      <Btn
-        text="حذف"
-        bg="#F43A40"
-        color="#fff"
-        startIcon="ant-design:delete-twotone"
-        iconColor="#fff"
-        iconWidth="18"
-      />
-      <Btn
-        border
-        text="طلب المساعدة"
-        bg="#7E3AF4"
-        color="#fff"
-        endIcon="clarity:help-info-line"
-        iconColor="#fff"
-        iconWidth="18"
-        @click="toogleModal()"
-      />
-      <Btn
-        text="جاري التحميل"
-        bg="#3A4AF4"
-        color="#fff"
-        endIcon="eos-icons:loading"
-        iconColor="#fff"
-        iconWidth="18"
-        @click="toogleModal()"
-      />
-    </Card>
+  <Card dir="rtl" class="mx-auto mt-[100px] w-[815px]" border>
+    <Flex col a="align-center" j="justify-center" y="gap-y-[20px]">
+      <Card title="الأزرار">
+        <Flex col y="gap-y-[20px]">
+          <Btn
+            text="حجز جلسة"
+            bg="#F4DB3A"
+            color="#000"
+            startIcon="line-md:uploading-loop"
+            endIcon="line-md:sunny-outline-twotone-loop"
+            iconColor="#070000"
+            iconWidth="20"
+            disabled
+          />
+          <Btn
+            text="تسجيل دخول"
+            startIcon="ri:login-circle-fill"
+            iconWidth="20"
+            textBtn
+            color="#0F99BB"
+            iconColor="#065569"
+            link="https://www.google.com"
+          />
+          <Btn
+            text="حفظ وإرسال"
+            bg="#7816DA"
+            color="#ffffff"
+            startIcon="bi:send-plus-fill"
+            iconColor="#FFFFFF"
+            iconWidth="15"
+            v-wave
+          />
+          <Btn
+            text="تعديل"
+            bg="#000000"
+            color="#fff"
+            startIcon="ant-design:edit-outlined"
+            iconColor="#fff"
+            iconWidth="18"
+          />
+          <Btn
+            border
+            bg="#000000"
+            color="#fff"
+            endIcon="fluent:send-copy-24-regular"
+            iconColor="#fff"
+            iconWidth="18"
+            @click="toogleModal()"
+          />
+          <Btn
+            border
+            text="طلب المساعدة"
+            bg="#000000"
+            color="#fff"
+            endIcon="fluent:send-copy-24-regular"
+            iconColor="#fff"
+            iconWidth="18"
+            @click="toogleModal()"
+          />
+        </Flex>
+      </Card>
+      <Card title="الأزرار">
+        <Flex col y="gap-y-[20px]">
+          <Btn
+            text="حجز جلسة"
+            bg="#F4DB3A"
+            color="#000"
+            startIcon="line-md:uploading-loop"
+            endIcon="line-md:sunny-outline-twotone-loop"
+            iconColor="#070000"
+            iconWidth="20"
+          />
+          <Btn
+            bg="#F4DB3A"
+            color="#000"
+            endIcon="line-md:sunny-outline-twotone-loop"
+            iconColor="#070000"
+            iconWidth="20"
+          />
+          <Btn
+            text="تسجيل دخول"
+            bg="#3A7BF4"
+            color="#fff"
+            endIcon="mi:chevron-right"
+            iconColor="#fff"
+            iconWidth="20"
+          />
+          <Btn bg="#3A7BF4" endIcon="bxs:user-x" iconWidth="25" textBtn />
+          <Btn
+            text="رفع ملف"
+            bg="#3AEBF4"
+            color="#000"
+            startIcon="mi:cloud-upload"
+            iconColor="#070000"
+            iconWidth="20"
+          />
+          <Btn
+            text="حذف"
+            bg="#F43A40"
+            color="#fff"
+            startIcon="ant-design:delete-twotone"
+            iconColor="#fff"
+            iconWidth="18"
+          />
+          <Btn
+            border
+            text="طلب المساعدة"
+            bg="#7E3AF4"
+            color="#fff"
+            endIcon="clarity:help-info-line"
+            iconColor="#fff"
+            iconWidth="18"
+            @click="toogleModal()"
+          />
+          <Btn
+            text="جاري التحميل"
+            bg="#3A4AF4"
+            color="#fff"
+            endIcon="eos-icons:loading"
+            iconColor="#fff"
+            iconWidth="18"
+            @click="toogleModal()"
+          />
+        </Flex>
+      </Card>
+    </Flex>
   </Card>
 </template>
 

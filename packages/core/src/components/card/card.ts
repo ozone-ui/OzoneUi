@@ -54,7 +54,9 @@ export const Card = defineComponent({
         h(
           'h1',
           {
-            class: `${this.titleSize} ${this.titleFontWeight} ${this.titleColor}`,
+            class:
+              `${this.titleSize} ${this.titleFontWeight} ${this.titleColor}` +
+              ' mb-[20px]',
           },
           this.title
         ),

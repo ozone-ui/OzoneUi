@@ -10,8 +10,6 @@ const textClasses =
 const borderClasses =
   'px-[10px] py-[6px] rounded-[8px] font-bold text-[14px] flex items-center justify-center gap-x-[8px] border-[1.5px] w-fit hover:bg-white hover:text-black transition-all duration-200 '
 
-const disabledClasses = 'text-[#1a2027] bg-[#0000001f]'
-
 export const Btn = defineComponent({
   name: 'Btn',
   props: {
