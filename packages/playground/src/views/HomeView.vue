@@ -1,5 +1,6 @@
 <script>
-import { Btn } from "@husamnas/ui";
+import { Btn } from "@ozone-ui/core";
+import "@ozone-ui/core/dist/style.css";
 export default {
   components: {
     Btn,
