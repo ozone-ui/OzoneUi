@@ -7,7 +7,7 @@
 1 notice cli v6.0.1
 2 verbose rootPath /Users/husamnasrallah/code/lerna
 3 info versioning independent
-4 verbose session 1d01723ad7fe6791
+4 verbose session 9ec8c7aa437f40b8
 5 verbose user-agent lerna/6.0.1/node@v16.11.0+x64 (darwin)
 6 silly argv { _: [ 'publish' ], composed: 'publish', lernaVersion: '6.0.1' }
 7 verbose rootPath /Users/husamnasrallah/code/lerna
@@ -19,71 +19,46 @@
 13 silly isBehindUpstream
 14 silly isBehindUpstream development is behind origin/development by 0 commit(s) and ahead by 1
 15 silly hasTags
-16 verbose hasTags true
-17 silly git-describe.sync "@husamnas/playground@0.0.6-1-g556d337" => {"lastTagName":"@husamnas/playground@0.0.6","lastVersion":"0.0.6","refCount":"1","sha":"556d337","isDirty":false}
-18 info Looking for changed packages since @husamnas/playground@0.0.6
-19 silly checking diff packages/core
-20 silly found diff in packages/core/src/components/btn/btn.ts
-21 verbose filtered diff [ 'packages/core/src/components/btn/btn.ts' ]
-22 silly checking diff packages/playground
-23 silly no diff found in @husamnas/playground
-24 verbose updated @ozone-ui/core
-25 verbose updated @husamnas/playground
-26 verbose git-describe undefined => "@husamnas/playground@0.0.6-1-g556d337"
-27 silly git-describe parsed => {"lastTagName":"@husamnas/playground@0.0.6","lastVersion":"0.0.6","refCount":"1","sha":"556d337","isDirty":false}
-28 info execute Skipping releases
-29 silly lifecycle No script for "preversion" in "ozone-ui", continuing
-30 silly lifecycle No script for "preversion" in "@ozone-ui/core", continuing
-31 verbose version @ozone-ui/core has no lockfile. Skipping lockfile update.
-32 silly lifecycle No script for "version" in "@ozone-ui/core", continuing
-33 silly lifecycle No script for "preversion" in "@husamnas/playground", continuing
-34 silly lifecycle No script for "version" in "@husamnas/playground", continuing
-35 silly lifecycle No script for "version" in "ozone-ui", continuing
-36 silly version Successfully applied prettier to updated file: packages/core/package.json
-37 silly version Successfully applied prettier to updated file: packages/playground/package.json
-38 silly version Successfully applied prettier to updated file: packages/playground/package-lock.json
-39 silly gitAdd [
-39 silly gitAdd   'packages/core/package.json',
-39 silly gitAdd   'packages/playground/package.json',
-39 silly gitAdd   'packages/playground/package-lock.json'
-39 silly gitAdd ]
-40 silly gitCommit Publish
-40 silly gitCommit
-40 silly gitCommit  - @ozone-ui/core@0.0.9
-40 silly gitCommit  - @husamnas/playground@0.0.7
-41 verbose git [
-41 verbose git   'commit',
-41 verbose git   '-F',
-41 verbose git   '/private/var/folders/np/dny7rth12j15rt0txb25ccdw0000gn/T/098b90a7-652b-4830-844a-a5c81acacf0c/lerna-commit.txt'
-41 verbose git ]
-42 silly gitTag @ozone-ui/core@0.0.9
-43 verbose git [ 'tag', '@ozone-ui/core@0.0.9', '-m', '@ozone-ui/core@0.0.9' ]
-44 silly gitTag @husamnas/playground@0.0.7
-45 verbose git [
-45 verbose git   'tag',
-45 verbose git   '@husamnas/playground@0.0.7',
-45 verbose git   '-m',
-45 verbose git   '@husamnas/playground@0.0.7'
-45 verbose git ]
-46 silly lifecycle No script for "postversion" in "@ozone-ui/core", continuing
-47 silly lifecycle No script for "postversion" in "@husamnas/playground", continuing
-48 silly lifecycle No script for "postversion" in "ozone-ui", continuing
-49 info git Pushing tags...
-50 silly gitPush origin development
-51 info publish Publishing packages to npm...
-52 silly getCurrentSHA
-53 verbose getCurrentSHA 45c3f269ce7b2609c99ee5df92dd82b7e9ee6c33
-54 silly lifecycle No script for "prepublish" in "ozone-ui", continuing
-55 silly lifecycle No script for "prepare" in "ozone-ui", continuing
-56 silly lifecycle No script for "prepublishOnly" in "ozone-ui", continuing
-57 silly lifecycle No script for "prepack" in "ozone-ui", continuing
-58 verbose pack-directory packages/core/dist
-59 silly lifecycle No script for "prepublish" in "@ozone-ui/core", continuing
-60 silly lifecycle No script for "prepare" in "@ozone-ui/core", continuing
-61 silly lifecycle No script for "prepublishOnly" in "@ozone-ui/core", continuing
-62 silly lifecycle No script for "prepack" in "@ozone-ui/core", continuing
-63 silly lifecycle No script for "postpack" in "@ozone-ui/core", continuing
-64 verbose packed packages/core/dist
-65 silly lifecycle No script for "postpack" in "ozone-ui", continuing
-66 verbose publish @ozone-ui/core
-67 error
+16 verbose hasTags false
+17 info Assuming all packages changed
+18 verbose updated @ozone-ui/core
+19 verbose git-describe undefined => "76ba9e9"
+20 silly git-describe parsed => {"refCount":"33","sha":"76ba9e9","isDirty":false}
+21 info execute Skipping releases
+22 silly lifecycle No script for "preversion" in "ozone-ui", continuing
+23 silly lifecycle No script for "preversion" in "@ozone-ui/core", continuing
+24 verbose version @ozone-ui/core has no lockfile. Skipping lockfile update.
+25 silly lifecycle No script for "version" in "@ozone-ui/core", continuing
+26 silly lifecycle No script for "version" in "ozone-ui", continuing
+27 silly gitAdd [ 'packages/core/package.json' ]
+28 silly gitCommit Publish
+28 silly gitCommit
+28 silly gitCommit  - @ozone-ui/core@0.0.2
+29 verbose git [
+29 verbose git   'commit',
+29 verbose git   '-F',
+29 verbose git   '/private/var/folders/np/dny7rth12j15rt0txb25ccdw0000gn/T/689f4998-622d-4f51-8094-d854f945e8d0/lerna-commit.txt'
+29 verbose git ]
+30 silly gitTag @ozone-ui/core@0.0.2
+31 verbose git [ 'tag', '@ozone-ui/core@0.0.2', '-m', '@ozone-ui/core@0.0.2' ]
+32 silly lifecycle No script for "postversion" in "@ozone-ui/core", continuing
+33 silly lifecycle No script for "postversion" in "ozone-ui", continuing
+34 info git Pushing tags...
+35 silly gitPush origin development
+36 info publish Publishing packages to npm...
+37 silly getCurrentSHA
+38 verbose getCurrentSHA 02dd12ab371cee02a2ca7ba05166a0dbdff846ab
+39 silly lifecycle No script for "prepublish" in "ozone-ui", continuing
+40 silly lifecycle No script for "prepare" in "ozone-ui", continuing
+41 silly lifecycle No script for "prepublishOnly" in "ozone-ui", continuing
+42 silly lifecycle No script for "prepack" in "ozone-ui", continuing
+43 verbose pack-directory packages/core/dist
+44 silly lifecycle No script for "prepublish" in "@ozone-ui/core", continuing
+45 silly lifecycle No script for "prepare" in "@ozone-ui/core", continuing
+46 silly lifecycle No script for "prepublishOnly" in "@ozone-ui/core", continuing
+47 silly lifecycle No script for "prepack" in "@ozone-ui/core", continuing
+48 silly lifecycle No script for "postpack" in "@ozone-ui/core", continuing
+49 verbose packed packages/core/dist
+50 silly lifecycle No script for "postpack" in "ozone-ui", continuing
+51 verbose publish @ozone-ui/core
+52 error
