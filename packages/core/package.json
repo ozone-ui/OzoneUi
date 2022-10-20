@@ -1,6 +1,6 @@
 {
   "name": "@ozone-ui/core",
-  "version": "0.0.3",
+  "version": "0.0.23",
   "description": "OzoneUi Core",
   "license": "MIT",
   "private": false,
@@ -67,9 +67,7 @@
     "vue-tsc": "^0.40.7"
   },
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com",
-    "access": "public",
-    "directory": "dist"
+    "access": "public"
   },
   "gitHead": "02dd12ab371cee02a2ca7ba05166a0dbdff846ab"
 }
