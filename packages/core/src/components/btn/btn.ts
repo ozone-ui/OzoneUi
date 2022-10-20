@@ -10,7 +10,7 @@ export const Btn = defineComponent({
   name: 'Btn',
   props: {
     btnType: {
-      type: String as PropType<BtnType>,
+      type: String as PropType<string>,
       default: 'primary',
     },
     text: {
