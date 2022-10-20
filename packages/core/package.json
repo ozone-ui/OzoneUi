@@ -70,11 +70,5 @@
     "registry": "https://npm.pkg.github.com",
     "access": "public",
     "directory": "dist"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/ozone-ui/OzoneUi.git",
-    "directory": "packages/core"
-  },
-  "gitHead": "45c3f269ce7b2609c99ee5df92dd82b7e9ee6c33"
+  }
 }
