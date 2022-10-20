@@ -28,6 +28,10 @@ export const Flex = defineComponent({
       type: String as PropType<string>,
       default: '',
     },
+    wrap: {
+      type: Boolean as PropType<boolean>,
+      default: false,
+    },
   },
   render() {
     return h(
@@ -36,12 +40,15 @@ export const Flex = defineComponent({
         class: [
           'flex w-full h-fit',
           this.col ? 'flex-col' : '',
-          this.g ? this.g : '',
-          this.x ? this.x : '',
-          this.y ? this.y : '',
-          this.j ? this.j : '',
-          this.a ? this.a : '',
+          this.wrap ? 'flex-wrap' : '',
         ],
+        style: {
+          justifyContent: this.j,
+          alignItems: this.a,
+          gap: `${this.g}px`,
+          rowGap: `${this.y}px`,
+          columnGap: `${this.x}px`,
+        },
       },
       [this.$slots.default?.()]
     )

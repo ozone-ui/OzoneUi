@@ -1,8 +1,8 @@
 <template>
   <Card dir="rtl" class="mx-auto mt-[100px] w-[815px]" border>
-    <Flex col a="align-center" j="justify-center" y="gap-y-[20px]">
+    <Flex col a="center" j="center" y="20">
       <Card title="الأزرار">
-        <Flex col y="gap-y-[20px]">
+        <Flex col y="20" a="center">
           <Btn
             text="حجز جلسة"
             bg="#F4DB3A"
@@ -21,6 +21,7 @@
             color="#0F99BB"
             iconColor="#065569"
             link="https://www.google.com"
+            v-wave
           />
           <Btn
             text="حفظ وإرسال"
@@ -38,6 +39,7 @@
             startIcon="ant-design:edit-outlined"
             iconColor="#fff"
             iconWidth="18"
+            v-wave
           />
           <Btn
             border
@@ -47,6 +49,7 @@
             iconColor="#fff"
             iconWidth="18"
             @click="toogleModal()"
+            v-wave
           />
           <Btn
             border
@@ -57,19 +60,21 @@
             iconColor="#fff"
             iconWidth="18"
             @click="toogleModal()"
+            v-wave
           />
         </Flex>
       </Card>
       <Card title="الأزرار">
-        <Flex col y="gap-y-[20px]">
+        <Flex col y="20">
           <Btn
             text="حجز جلسة"
-            bg="#F4DB3A"
-            color="#000"
+            bg="#078505"
+            color="#fff"
             startIcon="line-md:uploading-loop"
             endIcon="line-md:sunny-outline-twotone-loop"
-            iconColor="#070000"
+            iconColor="#fff"
             iconWidth="20"
+            v-wave
           />
           <Btn
             bg="#F4DB3A"
@@ -77,16 +82,24 @@
             endIcon="line-md:sunny-outline-twotone-loop"
             iconColor="#070000"
             iconWidth="20"
+            v-wave
           />
           <Btn
             text="تسجيل دخول"
             bg="#3A7BF4"
             color="#fff"
-            endIcon="mi:chevron-right"
+            startIcon="mi:chevron-right"
             iconColor="#fff"
             iconWidth="20"
+            v-wave
           />
-          <Btn bg="#3A7BF4" endIcon="bxs:user-x" iconWidth="25" textBtn />
+          <Btn
+            bg="#3A7BF4"
+            endIcon="bxs:user-x"
+            iconWidth="25"
+            textBtn
+            v-wave
+          />
           <Btn
             text="رفع ملف"
             bg="#3AEBF4"
@@ -94,6 +107,7 @@
             startIcon="mi:cloud-upload"
             iconColor="#070000"
             iconWidth="20"
+            v-wave
           />
           <Btn
             text="حذف"
@@ -102,6 +116,7 @@
             startIcon="ant-design:delete-twotone"
             iconColor="#fff"
             iconWidth="18"
+            v-wave
           />
           <Btn
             border
@@ -112,6 +127,7 @@
             iconColor="#fff"
             iconWidth="18"
             @click="toogleModal()"
+            v-wave
           />
           <Btn
             text="جاري التحميل"
@@ -121,6 +137,7 @@
             iconColor="#fff"
             iconWidth="18"
             @click="toogleModal()"
+            v-wave
           />
         </Flex>
       </Card>
