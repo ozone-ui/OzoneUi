@@ -1,6 +1,7 @@
 import { defineComponent, h, type PropType } from 'vue'
 import { Icon } from '@iconify/vue'
 
+//  classes used by button UI components such as IconButton
 const baseClasses =
   'px-[12px] py-[6px] rounded-[8px] text-white font-bold text-[14px] flex items-center justify-center gap-x-[8px] hover:brightness-110 transition-all duration-200 active:brightness-90'
 const borderClasses =
