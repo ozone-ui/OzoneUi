@@ -1,13 +1,14 @@
 import { defineComponent, h, type PropType } from 'vue'
 import { Icon } from '@iconify/vue'
+import VWave from 'v-wave'
 
 //  classes used by button UI components such as IconButton
 const baseClasses =
-  'px-[12px] py-[6px] rounded-[8px]  font-bold text-[14px] flex items-center justify-center gap-x-[8px] hover:brightness-110 transition-all duration-200 active:brightness-90 w-fit'
+  'px-[12px] py-[6px] rounded-[8px]  font-bold text-[14px] flex items-center justify-center gap-x-[8px] hover:brightness-110 transition-all duration-200  w-fit'
 const textClasses =
-  ' py-[6px]  font-bold text-[14px] flex items-center justify-center gap-x-[8px] hover:brightness-110 transition-all duration-200 active:brightness-90 w-fit'
+  ' py-[6px]  font-bold text-[14px] flex items-center justify-center gap-x-[8px] hover:brightness-110 transition-all duration-200  w-fit'
 const borderClasses =
-  'px-[10px] py-[6px] rounded-[8px] font-bold text-[14px] flex items-center justify-center gap-x-[8px] border-[1.5px] w-fit hover:bg-white hover:text-black transition-all duration-200 active:brightness-90'
+  'px-[10px] py-[6px] rounded-[8px] font-bold text-[14px] flex items-center justify-center gap-x-[8px] border-[1.5px] w-fit hover:bg-white hover:text-black transition-all duration-200 '
 
 const disabledClasses = 'text-[#1a2027] bg-[#0000001f]'
 
@@ -63,6 +64,7 @@ export const Btn = defineComponent({
       default: '',
     },
   },
+  diractive: [VWave],
 
   render() {
     return h(
@@ -93,7 +95,7 @@ export const Btn = defineComponent({
           cursor: this.disabled ? 'auto' : 'pointer',
         },
         disabled: this.disabled,
-        href: this.link,
+        href: this.link || null,
         target: '_blank',
 
         // on click if not disabled or link

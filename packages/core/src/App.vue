@@ -31,6 +31,7 @@
         startIcon="bi:send-plus-fill"
         iconColor="#FFFFFF"
         iconWidth="15"
+        v-wave
       />
       <Btn
         text="تعديل"

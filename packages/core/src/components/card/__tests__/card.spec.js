@@ -1,14 +1,13 @@
 import { describe, it, expect } from 'vitest'
 import { shallowMount, mount } from '@vue/test-utils'
-import { Btn } from './'
+import { Card } from './'
 let wrapper
 
-describe('Btn', () => {
+describe('Card', () => {
   beforeEach(() => {
-    wrapper = mount(Btn, {
+    wrapper = mount(Card, {
       props: {
-        text: 'test',
-        bg: 'red',
+        title: 'The Settings',
       },
     })
   })
@@ -20,4 +19,9 @@ describe('Btn', () => {
 
 it('matches snapshot', () => {
   expect(wrapper.html()).toMatchSnapshot()
+})
+
+// props title with class card-title
+it('has title', () => {
+  expect(wrapper.html()).toContain('The Settings')
 })

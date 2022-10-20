@@ -3,9 +3,9 @@ import { Icon } from '@iconify/vue'
 
 //  classes used by button UI components such as IconButton
 const baseClasses =
-  'px-[20px] py-[30px] rounded-[15px] w-full h-fit flex flex-col'
+  'px-[20px] py-[30px] rounded-[15px] w-full h-fit flex flex-col card-title'
 const borderClasses =
-  'px-[20px] py-[30px]  rounded-[15px]  border-[1px] bg-transparent flex flex-col'
+  'px-[20px] py-[30px]  rounded-[15px]  border-[1px] bg-transparent flex flex-col card-title'
 
 export const Card = defineComponent({
   name: 'Card',
