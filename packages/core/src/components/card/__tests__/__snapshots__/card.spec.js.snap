@@ -2,7 +2,7 @@
 
 exports[`matches snapshot 1`] = `
 "<div class=\\"px-[20px] py-[30px] rounded-[15px] w-full h-fit flex flex-col card-title\\" style=\\"border-color: transparent; background: rgb(247, 247, 247);\\">
-  <h1 class=\\"text-[20px] font-bold text-black\\">The Settings</h1>
+  <h1 class=\\"text-[20px] font-bold text-black mb-[20px]\\">The Settings</h1>
   <!---->
 </div>"
 `;

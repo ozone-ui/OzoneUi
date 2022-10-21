@@ -5,7 +5,7 @@ import { Icon } from '@iconify/vue'
 const baseClasses =
   'px-[20px] py-[30px] rounded-[15px] w-full h-fit flex flex-col card-title'
 const borderClasses =
-  'px-[20px] py-[30px]  rounded-[15px]  border-[1px] bg-transparent flex flex-col card-title'
+  'px-[20px] py-[30px]  rounded-[15px]   border-[1px] bg-transparent flex flex-col card-title'
 
 export const Card = defineComponent({
   name: 'Card',
@@ -38,6 +38,10 @@ export const Card = defineComponent({
       type: String as PropType<string>,
       default: 'text-black',
     },
+    w: {
+      type: String as PropType<string>,
+      default: '',
+    },
   },
 
   render() {
@@ -48,6 +52,7 @@ export const Card = defineComponent({
         style: {
           borderColor: this.border ? this.bg : 'transparent',
           background: this.border ? 'transparent' : this.bg,
+          width: this.w,
         },
       },
       [

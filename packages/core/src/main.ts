@@ -5,6 +5,7 @@ import wave from 'v-wave'
 
 import { Btn, Card, Flex, Txt } from './components/index'
 import './index.css'
+import './lib/bundle.js'
 
 const app = createApp(App)
 

@@ -32,13 +32,21 @@ export const Flex = defineComponent({
       type: Boolean as PropType<boolean>,
       default: false,
     },
+    w: {
+      type: String as PropType<string>,
+      default: '',
+    },
+    h: {
+      type: String as PropType<string>,
+      default: '',
+    },
   },
   render() {
     return h(
       'div',
       {
         class: [
-          'flex w-full h-fit',
+          'flex h-fit',
           this.col ? 'flex-col' : '',
           this.wrap ? 'flex-wrap' : '',
         ],
@@ -48,6 +56,8 @@ export const Flex = defineComponent({
           gap: `${this.g}px`,
           rowGap: `${this.y}px`,
           columnGap: `${this.x}px`,
+          width: `${this.w}px`,
+          height: `${this.h}px`,
         },
       },
       [this.$slots.default?.()]

@@ -1,14 +1,29 @@
 <template>
+  <!-- Menu -->
+
+  <Flex w="1218" class="mx-auto mt-[16px]" a="center" j="space-between">
+    <Flex x="28" h="40" a="center">
+      <Icon icon="qewam:logo" width="24.62px" height="28.12px" />
+      <Flex v-for="(item, index) in menuList" :key="index">
+        <Txt :text="item.name" fontWeight="normal" size="16px" />
+      </Flex>
+    </Flex>
+    <Flex x="28" h="40" a="center" width="18px">
+      <Icon icon="bytesize:settings" width="18px" />
+      <Icon icon="mingcute:notification-line" />
+    </Flex>
+  </Flex>
+
   <Card dir="rtl" class="mx-auto mt-[100px] w-[815px]" border>
-    <Flex col a="center" j="center" y="20">
-      <Card title="الأزرار">
-        <Flex col y="20" a="center">
+    <Flex col a="start" j="start" y="20">
+      <Card title="الأزرار" border w="100%">
+        <Flex col y="20" a="start">
           <Btn
             text="حجز جلسة"
             bg="#F4DB3A"
             color="#000"
             startIcon="line-md:uploading-loop"
-            endIcon="line-md:sunny-outline-twotone-loop"
+            endIcon="qewam:user"
             iconColor="#070000"
             iconWidth="20"
             disabled
@@ -148,38 +163,39 @@
 <script lang="ts" setup>
 // import { Btn } from './components/btn/'
 // import { Card } from './components/card/'
-// import { Icon } from '@iconify/vue'
+import { Icon } from '@iconify/vue'
 import { ref } from '@vue/reactivity'
 
-const showModal = ref(false)
-const toogleModal = () => {
-  showModal.value = !showModal.value
-}
-function createRipple(event) {
-  const button = event.currentTarget
-
-  const circle = document.createElement('span')
-  const diameter = Math.max(button.clientWidth, button.clientHeight)
-  const radius = diameter / 2
-
-  circle.style.width = circle.style.height = `${diameter}px`
-  circle.style.left = `${event.clientX - button.offsetLeft - radius}px`
-  circle.style.top = `${event.clientY - button.offsetTop - radius}px`
-  circle.classList.add('ripple')
-
-  const ripple = button.getElementsByClassName('ripple')[0]
-
-  if (ripple) {
-    ripple.remove()
-  }
-
-  button.appendChild(circle)
-}
-
-const buttons = document.getElementsByTagName('button')
-for (const button of buttons as any) {
-  button.addEventListener('click', createRipple)
-}
+const menuList = [
+  {
+    id: 1,
+    name: 'Dashboard',
+  },
+  {
+    id: 2,
+    name: 'Programs',
+  },
+  {
+    id: 3,
+    name: 'Directory',
+  },
+  {
+    id: 4,
+    name: 'Resources',
+  },
+  {
+    id: 5,
+    name: 'Applications',
+  },
+  {
+    id: 6,
+    name: 'E-Wallet',
+  },
+  {
+    id: 7,
+    name: '+Invite',
+  },
+]
 </script>
 
 <style scoped>
