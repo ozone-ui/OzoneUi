@@ -40,6 +40,10 @@ export const Flex = defineComponent({
       type: String as PropType<string>,
       default: '',
     },
+    mb: {
+      type: String as PropType<string>,
+      default: '',
+    },
   },
   render() {
     return h(
@@ -58,6 +62,7 @@ export const Flex = defineComponent({
           columnGap: `${this.x}px`,
           width: `${this.w}px`,
           height: `${this.h}px`,
+          marginBottom: `${this.mb}px`,
         },
       },
       [this.$slots.default?.()]
